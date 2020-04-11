@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+}
+
+#right-wheel,
+#left-wheel {
+  animation: rolling 2s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#man-on-bike {
+  animation: bouncing 1s linear infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#hat {
+  animation: moving-hat 1s linear infinite alternate;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes rolling {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bouncing {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
+
+@keyframes moving-hat {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(40%);
+  }
+}
